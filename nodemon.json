@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_USER": "jerrikadm",
+    "MONGO_PASSWORD": "sBYQXNR9hb7Kb0O3",
+    "MONGO_DB": "blan-pizza"
+  }
+}
