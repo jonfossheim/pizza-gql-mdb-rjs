@@ -35,7 +35,7 @@ app.use(
             order_name: String!
             order_status: String!
             order_instructions: String
-            pizza_type: String!
+            pizza_type: Pizza!
         }
 
         input OrderInput {
@@ -95,9 +95,15 @@ app.use(
       },
       orders: () => {
         return Order.find()
+          .populate('pizza_type')
           .then((orders) => {
             return orders.map((order) => {
-              return { ...order._doc };
+              return {
+                ...order._doc,
+                pizza_type: {
+                  ...order._doc.pizza_type._doc,
+                },
+              };
             });
           })
           .catch((err) => {
