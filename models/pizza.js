@@ -14,6 +14,10 @@ const pizzaSchema = new Schema({
   pizza_image: {
     type: String,
   },
+  stock: {
+    type: Number,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model('Pizza', pizzaSchema);

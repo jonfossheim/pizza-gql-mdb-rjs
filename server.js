@@ -22,6 +22,7 @@ app.use(
             pizza_name: String!
             pizza_price: Float!
             pizza_image: String!
+            stock: Int!
         }
 
         type User {
@@ -47,6 +48,7 @@ app.use(
             pizza_name: String!
             pizza_price: Float!
             pizza_image: String!
+            stock: Int!
         }
 
         type RootQuery {
@@ -81,6 +83,7 @@ app.use(
           pizza_name: args.pizzaInput.pizza_name,
           pizza_price: +args.pizzaInput.pizza_price,
           pizza_image: args.pizzaInput.pizza_image,
+          stock: args.pizzaInput.stock,
         });
         return pizza
           .save()

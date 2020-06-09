@@ -13,7 +13,6 @@ const orderSchema = new Schema({
   },
   order_instructions: {
     type: String,
-    required: false,
   },
   pizza_type: {
     type: Schema.Types.ObjectId,
